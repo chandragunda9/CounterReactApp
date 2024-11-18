@@ -1,8 +1,8 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 import { PropTypes } from 'prop-types'
 
-function CounterButton({ by, method, increment, decrement }) {
+function CounterButton({ by, increment, decrement }) {
 
     // const buttonStyle = {
     //     fontSize: '30px',
@@ -20,13 +20,11 @@ function CounterButton({ by, method, increment, decrement }) {
     console.log(by);
 
 
-    const [count, setCount] = useState(0);
+    // const [count, setCount] = useState(0);
 
     function incrementCounterFunction() {
-
-        setCount(count + by);
-        console.log(count);
-        method();
+        // setCount(count + by);
+        // console.log(count);
         increment(by);
         // state[1](state[0] + 1);
         // console.log(state[0]);
@@ -35,11 +33,10 @@ function CounterButton({ by, method, increment, decrement }) {
     }
 
 
-    function decrementCounterFunction() {
-        setCount(count - by);
-        decrement(by);
-        method();
-    }
+    // function decrementCounterFunction() {
+    //     setCount(count - by);
+    //     decrement(by);
+    // }
 
     return (
         <div>
@@ -50,7 +47,7 @@ function CounterButton({ by, method, increment, decrement }) {
                 // style={buttonStyle}
                 >+{by}</button>
 
-                <button className='counterButton' onClick={decrementCounterFunction}>
+                <button className='counterButton' onClick={() => decrement(by)}>
                     -{by}
                 </button>
             </div>

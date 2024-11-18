@@ -19,21 +19,17 @@ function Counter() {
         setCount(0);
     }
 
-    function someMethodInParent() {
-        console.log("parent method called");
-    }
-
     const [count, setCount] = useState(0);
     return (
         <>
             <span className='totalCount'>{count}</span>
-            <CounterButton by={1} method={someMethodInParent} increment={incrementCounterParentFunction}
+            <CounterButton by={1} increment={incrementCounterParentFunction}
                 decrement={decrementCounterParentFunction} />
-            <CounterButton by={2} method={someMethodInParent} increment={incrementCounterParentFunction}
+            <CounterButton by={2} increment={incrementCounterParentFunction}
                 decrement={decrementCounterParentFunction} />
-            <CounterButton by={5} method={someMethodInParent} increment={incrementCounterParentFunction}
+            <CounterButton by={5} increment={incrementCounterParentFunction}
                 decrement={decrementCounterParentFunction} />
-            <CounterButton method={someMethodInParent} increment={incrementCounterParentFunction}
+            <CounterButton increment={incrementCounterParentFunction}
                 decrement={decrementCounterParentFunction}></CounterButton>
             <ResetButton resetMethod={resetCounter}></ResetButton>
         </>

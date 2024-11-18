@@ -47,13 +47,13 @@ function App() {
 // }
 
 
-function PlayingWithProps({ prop1, prop2 }) {
-  console.log(prop1);
-  console.log(prop2);
+// function PlayingWithProps({ prop1, prop2 }) {
+//   console.log(prop1);
+//   console.log(prop2);
 
-  return (
-    <div>Props</div>
-  );
-}
+//   return (
+//     <div>Props</div>
+//   );
+// }
 
 export default App;
